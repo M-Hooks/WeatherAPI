@@ -29,17 +29,16 @@ fetch(weatherApi)
        console.log(day1)
     }
 const DisplayWeather = (weather) => {
-    for (var i = 0; i < 5; i++){
-        temp.innerText=`Temp:${weather.list[i].main.temp}°F`
-        temp1.innerText=`Humidity:${weather.list[i].main.humidity}`
-        temp2.innerText=`Feels like:${weather.list[i].main.feels_like}°F`
-        temp3.innerText=`Temp_Max:${weather.list[i].main.temp_max}°F`
-        temp4.innerText=`Temp_Min:${weather.list[i].main.temp_min}°F`
-        temp5.innerText=`Rain:${weather.list[i].weather[i].description}`
-        temp6.innerText=`Wind: ${weather.list[i].wind.speed}mph`
+        temp.innerText=`Temp:${weather.list[0].main.temp}°F`
+        temp1.innerText=`Humidity:${weather.list[0].main.humidity}`
+        temp2.innerText=`Feels like:${weather.list[0].main.feels_like}°F`
+        temp3.innerText=`Temp_Max:${weather.list[0].main.temp_max}°F`
+        temp4.innerText=`Temp_Min:${weather.list[0].main.temp_min}°F`
+        temp5.innerText=`Rain:${weather.list[0].weather[0].description}`
+        temp6.innerText=`Wind: ${weather.list[0].wind.speed}mph`
         temp7.innerText=`${weather.city.name}`
     }
-}
+
 
 var weatherMetric = {
     temp: temp.value,
